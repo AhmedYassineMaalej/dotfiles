@@ -1,0 +1,10 @@
+# If not running interactively, don't do anything
+export EDITOR="nvim"
+
+[[ $- != *i* ]] && return
+
+# skip if not tty
+[[ ! -t 0 ]] && return
+
+exec fish --login
+export PATH="$HOME/.local/bin:$PATH"
