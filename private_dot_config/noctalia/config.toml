@@ -1,0 +1,201 @@
+[bar.default]
+background_opacity = 0.79999998211860657
+capsule = true
+capsule_radius = 12
+center = [ "clock", "workspaces" ]
+end = [ "group:g1", "session" ]
+font_family = "Adwaita Sans"
+font_weight = 600
+margin_edge = 8
+margin_ends = 10
+padding = 6
+position = "left"
+start = [ "control-center", "tray" ]
+thickness = 46
+
+    [bar.default.monitor.eDP-1]
+    enabled = false
+
+    [[bar.default.capsule_group]]
+    enabled = true
+    fill = "surface_variant"
+    id = "g1"
+    members = [ "battery", "temp", "cpu", "ram", "network_tx", "network_rx" ]
+    opacity = 1.0
+    padding = 6.0
+    radius = 12.0
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[dock]
+auto_hide = true
+launcher_position = "end"
+magnification_scale = 1.3000000044703484
+margin_edge = 9
+position = "right"
+radius = 10
+reserve_space = false
+shadow = false
+
+[idle]
+pre_action_fade_seconds = 0
+
+[location]
+address = "Sfax, Tunisia"
+latitude = 34.744
+longitude = 10.7552
+
+[lockscreen]
+fingerprint = false
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1", "lockscreen-login-box@HDMI-A-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 961.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_password_hint = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 600.0
+    cy = 556.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_password_hint = true
+
+[osd]
+background_opacity = 0.79999998211860657
+position = "top_right"
+position_vertical = "top_right"
+
+    [osd.kinds]
+    lock_keys = false
+
+[plugins]
+enabled = []
+
+[shell]
+font_family = "Adwaita Sans"
+password_style = "random"
+
+    [shell.launcher]
+    app_grid = true
+    categories = false
+
+    [shell.panel]
+    control_center_placement = "floating"
+    session_placement = "floating"
+    session_position = "center"
+    transparency_mode = "soft"
+
+[system.monitor]
+cpu_temp_activity_threshold = 80
+cpu_temp_critical_threshold = 90
+
+[theme]
+builtin = "Catppuccin"
+
+    [theme.templates]
+    enable_builtin_templates = false
+    enable_community_templates = false
+
+[wallpaper]
+directory = "/home/aym/Downloads/wallpapers"
+
+    [wallpaper.default]
+    path = "/home/aym/Downloads/wallpapers/raiden.jpeg"
+
+    [wallpaper.last]
+    path = "/home/aym/Downloads/wallpapers/raiden.jpeg"
+
+    [wallpaper.monitors.HDMI-A-1]
+    path = "/home/aym/Downloads/wallpapers/raiden.jpeg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/aym/Downloads/wallpapers/raiden.jpeg"
+
+[widget.battery]
+hide_when_plugged = true
+
+[widget.clock]
+vertical_format = "{:%I\\n%M\\n―\\n%b\\n%e}"
+
+[widget.control-center]
+color = "primary"
+glyph = "adjustments"
+scale = 1.25
+
+[widget.launcher]
+capsule = true
+color = "primary"
+glyph = "flame"
+scale = 1.25
+
+[widget.network_tx]
+network_speed_compact = true
+
+[widget.session]
+icon_color = "error"
+scale = 1.25
+
+[widget.sysmon]
+display = "graph"
+
+[widget.tray]
+drawer = true
+scale = 1.25
+
+[widget.workspaces]
+anchor = true
+capsule = true
+capsule_padding = 7
+display = "none"
+empty_color = "primary"
+focused_color = "error"
+focused_output_only = true
+occupied_color = "primary"
+scale = 1.25
