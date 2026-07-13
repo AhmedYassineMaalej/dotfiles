@@ -20,6 +20,7 @@ local servers = {
   },
   clangd = {},
   pyright = {},
+  svelte = {},
   rust_analyzer = {
     settings = {
       ["rust-analyzer"] = {
@@ -43,7 +44,11 @@ local servers = {
 }
 
 local mason = require("mason")
-mason.setup()
+mason.setup({
+  ui = {
+    border = "rounded",
+  },
+})
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 local capabilities = require("blink-cmp").get_lsp_capabilities(capabilities) --- @diagnostic disable-line: redefined-local
